@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Arms
+  - Shoot
+  - ' Harpoon'
+  - Floor
+  - Chao
+  - Ostra
+  - Enemy
+  - Canvas
+  - LifePlayer
+  - Ilhas
+  - Complete
+  - Dead
+  - Segue
+  - Mob
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1360051455
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1895002285
+    locked: 0
+  - name: Tile
+    uniqueID: 1848795071
+    locked: 0
+  - name: Boss
+    uniqueID: 1370213475
+    locked: 0
+  - name: 1
+    uniqueID: 3585982483
+    locked: 0
+  - name: 2
+    uniqueID: 726526267
+    locked: 0
+  - name: 3
+    uniqueID: 3948091649
+    locked: 0
+  - name: Mapa
+    uniqueID: 3201039437
+    locked: 0
+  - name: Ilhas
+    uniqueID: 3901418113
+    locked: 0
+  - name: Boat
+    uniqueID: 2358777515
+    locked: 0
+  - name: Mobs
+    uniqueID: 3164554149
+    locked: 0
