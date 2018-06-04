@@ -6,7 +6,7 @@ public class ScrollSky : MonoBehaviour
 
     public Transform[] backgrounds;         // Array (list) of all the back- and foregrounds to be parallaxed
     private float[] parallaxScales;         // The proportion of the camera's movement to move the backgrounds by
-    public float smoothing = 1f;            // How smooth the parallax is going to be. Make sure to set this above 0
+    public float smoothing = 2f;            // How smooth the parallax is going to be. Make sure to set this above 0
 
     private Transform cam;                  // reference to the main cameras transform
     private Vector3 previousCamPos;         // the position of the camera in the previous frame
