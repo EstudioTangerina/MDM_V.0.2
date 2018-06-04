@@ -18,6 +18,7 @@ TagManager:
   - Dead
   - Segue
   - Mob
+  - Background
   layers:
   - Default
   - TransparentFX

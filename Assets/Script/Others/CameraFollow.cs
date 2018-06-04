@@ -9,11 +9,11 @@ public class CameraFollow : MonoBehaviour {
     void Start () {
         Player = GameObject.FindGameObjectWithTag("Player");
         offset = transform.position - Player.transform.position;
-        transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, transform.position.z);
+        transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
 	}
 	
 	void LateUpdate () {
         transform.position = Player.transform.position + offset;
-        transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, transform.position.z);
+        transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
     }
 }
