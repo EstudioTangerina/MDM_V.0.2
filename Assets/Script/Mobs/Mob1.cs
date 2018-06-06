@@ -7,7 +7,7 @@ public class Mob1 : MonoBehaviour {
     public float walkSpeed = 2.0f;      // Walkspeed
     public float wallLeft =2.2f;       // Define wallLeft
     public float wallRight = 20f;      // Define wallRight
-    float walkingDirection = 1.0f;
+    float walkingDirection = 2.0f;
     Vector2 walkAmount;
     float originalX; // Original float value
 
@@ -28,14 +28,14 @@ public class Mob1 : MonoBehaviour {
         walkAmount.x = walkingDirection * walkSpeed * Time.deltaTime;
         if (walkingDirection > 0.0f && transform.position.x >= wallRight)
         {
-            walkingDirection = -1.0f;
+            walkingDirection = -2.0f;
         }
         else if (walkingDirection < 0.0f && transform.position.x <= wallLeft)
         {
-            walkingDirection = 1.0f;
+            walkingDirection = 2.0f;
         }
         transform.Translate(walkAmount);
-        transform.localScale = new Vector3(-walkingDirection,1,1);
+        transform.localScale = new Vector3(-walkingDirection ,transform.localScale.y, transform.localScale.z);
     }
 
     void OnCollisionEnter2D(Collision2D coll)

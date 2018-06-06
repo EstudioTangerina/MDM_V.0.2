@@ -143,7 +143,9 @@ public class AcrPlayer : MonoBehaviour {
 
     void VoltaArpao()
     {
-        Vector2 meuvetorbacana = (Vector2)inst.transform.position - (Vector2)spawnBullet.transform.position;
+        Vector2 Posivolta = new Vector2(transform.position.x, transform.position.y + 0.75f);
+
+        Vector2 meuvetorbacana = (Vector2)inst.transform.position - Posivolta;
         inst.GetComponent<Rigidbody2D>().velocity -= meuvetorbacana;
     }
 

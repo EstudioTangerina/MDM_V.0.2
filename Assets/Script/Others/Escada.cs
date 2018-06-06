@@ -20,7 +20,7 @@ public class Escada : MonoBehaviour {
         }
         else
         {
-           // other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
+           //other.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
         }
     }
 }
