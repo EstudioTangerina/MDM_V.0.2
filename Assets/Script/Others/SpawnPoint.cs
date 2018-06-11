@@ -5,13 +5,13 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour {
 
     public GameObject enemy;              
-    public float spawnTime = 6f;           
+    private float spawnTime = 3f;           
     public Transform[] spawnPoints;         
 
 
     void Start()
     {
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        InvokeRepeating("Spawn", spawnTime, spawnTime - 1);
     }
 
 

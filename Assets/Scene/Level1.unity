@@ -292,6 +292,16 @@ Prefab:
       propertyPath: m_TagString
       value: Mob
       objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98723141f9e823f4689e4fde95896887, type: 2}
   m_IsPrefabParent: 0
@@ -22781,7 +22791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1021983391949410, guid: 1c2a67bbbf064ef409bb275f7a458ccb, type: 2}
-  spawnTime: 3
   spawnPoints:
   - {fileID: 1130750396}
   - {fileID: 607716301}
@@ -22806,18 +22815,6 @@ GameObject:
     type: 2}
   m_PrefabInternal: {fileID: 1351708661}
 --- !u!114 &940077420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940077419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ead846ec5bde8324db59f72ac29e31f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 0
---- !u!114 &940077421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -23120,7 +23117,7 @@ Prefab:
     - target: {fileID: 114608977702398652, guid: 98723141f9e823f4689e4fde95896887,
         type: 2}
       propertyPath: walkSpeed
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 212989527455972796, guid: 98723141f9e823f4689e4fde95896887,
         type: 2}
@@ -23152,6 +23149,16 @@ Prefab:
     - target: {fileID: 4559147848735934, guid: 98723141f9e823f4689e4fde95896887, type: 2}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98723141f9e823f4689e4fde95896887, type: 2}
@@ -23824,7 +23831,7 @@ Prefab:
     - target: {fileID: 114608977702398652, guid: 98723141f9e823f4689e4fde95896887,
         type: 2}
       propertyPath: walkSpeed
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 212989527455972796, guid: 98723141f9e823f4689e4fde95896887,
         type: 2}
@@ -23856,6 +23863,16 @@ Prefab:
     - target: {fileID: 4559147848735934, guid: 98723141f9e823f4689e4fde95896887, type: 2}
       propertyPath: m_LocalScale.z
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98723141f9e823f4689e4fde95896887, type: 2}
@@ -24545,7 +24562,7 @@ Prefab:
     - target: {fileID: 114608977702398652, guid: 98723141f9e823f4689e4fde95896887,
         type: 2}
       propertyPath: walkSpeed
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 212989527455972796, guid: 98723141f9e823f4689e4fde95896887,
         type: 2}
@@ -24577,6 +24594,16 @@ Prefab:
     - target: {fileID: 4559147848735934, guid: 98723141f9e823f4689e4fde95896887, type: 2}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50461350573360382, guid: 98723141f9e823f4689e4fde95896887,
+        type: 2}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98723141f9e823f4689e4fde95896887, type: 2}

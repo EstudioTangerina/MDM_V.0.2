@@ -39,6 +39,8 @@ public class AcrPlayer : MonoBehaviour {
     [SerializeField]
     private GameObject bullet;
 
+    private GameObject enemy;
+
     public GameObject inst;
 
     void Start()
@@ -143,10 +145,14 @@ public class AcrPlayer : MonoBehaviour {
 
     void VoltaArpao()
     {
-        Vector2 Posivolta = new Vector2(transform.position.x, transform.position.y + 0.75f);
+        if(this.gameObject != null)
+        {
+            Vector2 Posivolta = new Vector2(transform.position.x, transform.position.y + 0.75f);
 
-        Vector2 meuvetorbacana = (Vector2)inst.transform.position - Posivolta;
-        inst.GetComponent<Rigidbody2D>().velocity -= meuvetorbacana;
+            Vector2 meuvetorbacana = (Vector2)inst.transform.position - Posivolta;
+            inst.GetComponent<Rigidbody2D>().velocity -= meuvetorbacana;
+        }
+     
     }
 
     void FaceMouse()
@@ -199,7 +205,7 @@ public class AcrPlayer : MonoBehaviour {
         inst.GetComponent<Collider2D>().isTrigger = false;
     }
 
-
+    //add Knockback
     public IEnumerator Knockback(float KnockDur, float KnockPwr, Vector3 KnockbackDir)
     {
         float timer  = 0;
@@ -226,6 +232,12 @@ public class AcrPlayer : MonoBehaviour {
         if (coll.gameObject.tag.Equals("Mob"))
         {
             other1 = coll.gameObject;
+        }
+        if (coll.gameObject.tag.Equals("Enemy"))
+        {
+            other1 = coll.gameObject;
+
+            Destroy(other1);
         }
     }
 }

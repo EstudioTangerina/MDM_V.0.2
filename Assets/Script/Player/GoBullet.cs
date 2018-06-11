@@ -61,8 +61,9 @@ public class GoBullet : MonoBehaviour {
             Damage(coll);
             player.GetComponent<AcrPlayer>().count = false;
             player.GetComponent<AcrPlayer>().inst.transform.parent = coll.gameObject.transform;
+            //StartCoroutine(player.GetComponent<AcrPlayer>().Knockback(0.002f, 500f, coll.gameObject.transform.position));
 
-            
+
             if (enemy.GetComponent<LifeEnemy>().life <= 0)
             {
                 player.GetComponent<AcrPlayer>().inst.transform.parent = null;

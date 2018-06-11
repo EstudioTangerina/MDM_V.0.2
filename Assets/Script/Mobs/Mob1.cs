@@ -43,7 +43,7 @@ public class Mob1 : MonoBehaviour {
         if (coll.gameObject.tag.Equals("Player"))
         {
             player.GetComponent<AcrPlayer>().life -= 1;
-            StartCoroutine(player.GetComponent<AcrPlayer>().Knockback(0.02f, 350f , player.transform.position));
+            StartCoroutine(player.GetComponent<AcrPlayer>().Knockback(0.05f, 700f, player.transform.position));
         }
     }
 

@@ -28,7 +28,7 @@ public class ScrollSky : MonoBehaviour
         parallaxScales = new float[backgrounds.Length];
         for (int i = 0; i < backgrounds.Length; i++)
         {
-            parallaxScales[i] =  backgrounds[i].position.z * 0.5f;
+            parallaxScales[i] =  backgrounds[i].position.z * 0.4f;
         }
     }
 
