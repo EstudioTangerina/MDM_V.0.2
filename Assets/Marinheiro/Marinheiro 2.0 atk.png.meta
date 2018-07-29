@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: d8f8d9519cb3f9240aff24b298b74fce
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Marinheiro 2.0 atk_0
+    21300002: Marinheiro 2.0 atk_1
+    21300004: Marinheiro 2.0 atk_2
+    21300006: Marinheiro 2.0 atk_3
+    21300008: Marinheiro 2.0 atk_4
+    21300010: Marinheiro 2.0 atk_5
+    21300012: Marinheiro 2.0 atk_6
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 980
+        width: 250
+        height: 260
+      alignment: 9
+      pivot: {x: 0.37868366, y: 0.13144836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d422be11b30a90e44996760bce046779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1010
+        width: 170
+        height: 250
+      alignment: 9
+      pivot: {x: 0.50443184, y: 0.016758544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e151030a7a22af344b7ccc1d408b70ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 670
+        width: 250
+        height: 270
+      alignment: 9
+      pivot: {x: 0.10128436, y: 0.09652122}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b79902f0027dc14399bf65b3f84cc2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_3
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 670
+        width: 250
+        height: 250
+      alignment: 9
+      pivot: {x: 0.09696167, y: 0.10440796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc16ae06d415214588979f3e156b9a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 340
+        width: 250
+        height: 260
+      alignment: 9
+      pivot: {x: 0.3792207, y: 0.13287611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9524798eb8c7546af2f846dc1870ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_5
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 348
+        width: 250
+        height: 250
+      alignment: 9
+      pivot: {x: 0.10129736, y: 0.110602416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5674b0e03bb7ab3449f38226460e5d39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marinheiro 2.0 atk_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 30
+        width: 250
+        height: 250
+      alignment: 9
+      pivot: {x: 0.10240338, y: 0.10257811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c9456cc3d496447bd7c25ccdf5e6a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 197b43b00faf0004abec963cc4bb2d30
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
