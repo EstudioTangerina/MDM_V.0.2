@@ -16,7 +16,7 @@ MonoBehaviour:
   m_TilingRules:
   - m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
     m_Sprites:
-    - {fileID: 21300044, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
+    - {fileID: 21300038, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
     - {fileID: 21300042, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
     - {fileID: 21300044, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
     - {fileID: 21300046, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
@@ -28,7 +28,7 @@ MonoBehaviour:
     m_RandomTransform: 0
   - m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
     m_Sprites:
-    - {fileID: 21300046, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
+    - {fileID: 21300042, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
     - {fileID: 21300038, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
     - {fileID: 21300044, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}
     - {fileID: 21300046, guid: b3f511020ce85044ba6f5a9d8173d7e7, type: 3}

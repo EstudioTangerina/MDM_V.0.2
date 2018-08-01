@@ -42,15 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Terra
-    uniqueID: 2061744897
-    locked: 0
-  - name: Agua
+  - name: AguaFrente
     uniqueID: 362510689
     locked: 0
   - name: Areia
     uniqueID: 4133197867
     locked: 0
+  - name: Trap"s
+    uniqueID: 2605844723
+    locked: 0
+  - name: Terra
+    uniqueID: 2061744897
+    locked: 0
   - name: Player
     uniqueID: 1359635399
+    locked: 0
+  - name: AguaAtras
+    uniqueID: 1209288911
     locked: 0

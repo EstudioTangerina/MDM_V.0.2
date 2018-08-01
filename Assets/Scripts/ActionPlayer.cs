@@ -5,9 +5,10 @@ using UnityEngine;
 public class ActionPlayer : MonoBehaviour
 {
     private float Speed;
-    public float jumpSpeed = 3.5f;
+    public float jumpSpeed = 5.5f;
     private bool isGrounded = true;
 
+    private bool Andou = false;
 
     private Rigidbody2D RB;
 
@@ -21,7 +22,7 @@ public class ActionPlayer : MonoBehaviour
     {
 
         RB = GetComponent<Rigidbody2D>();
-        Speed = 2.5f;
+        Speed = 3.5f;
         timeJump = 3;
         anim = GetComponent<Animator>();
 

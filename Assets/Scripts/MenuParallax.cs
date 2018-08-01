@@ -23,7 +23,6 @@ public class MenuParallax : MonoBehaviour {
         {
             var side = pl.transform.localScale.x;
             pos += speed * side;
-
             mat.mainTextureOffset = new Vector2(pos, 0);
         }
 	
