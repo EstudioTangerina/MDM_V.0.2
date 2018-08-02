@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 using UnityEngine;
 
 public class ActionPlayer : MonoBehaviour
@@ -9,6 +10,9 @@ public class ActionPlayer : MonoBehaviour
     private bool isGrounded = true;
 
     private bool Andou = false;
+
+    public GameObject AguaAtras;
+    public bool Passou = true;
 
     private Rigidbody2D RB;
 
@@ -87,6 +91,21 @@ public class ActionPlayer : MonoBehaviour
         {
             timeJump = 0;
             isGrounded = true;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.name == "AguaAtras")
+        {
+            AguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
+        }
+        
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+         if (collision.gameObject.name == "AguaAtras")
+        {
+            AguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 1f);
         }
     }
 

@@ -3363,7 +3363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 022f6e0fff6b14e43a1473a94daced39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 7
+  jumpSpeed: 10
+  AguaAtras: {fileID: 1289824519}
+  Passou: 1
 --- !u!1 &794967037
 GameObject:
   m_ObjectHideFlags: 0
@@ -20551,6 +20553,9 @@ GameObject:
   - component: {fileID: 1289824520}
   - component: {fileID: 1289824522}
   - component: {fileID: 1289824521}
+  - component: {fileID: 1289824525}
+  - component: {fileID: 1289824524}
+  - component: {fileID: 1289824523}
   m_Layer: 0
   m_Name: AguaAtras
   m_TagString: Untagged
@@ -33272,6 +33277,59 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &1289824523
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1289824519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+--- !u!50 &1289824524
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1289824519}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!19719996 &1289824525
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1289824519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
 --- !u!1 &1324314766
 GameObject:
   m_ObjectHideFlags: 0
@@ -74195,7 +74253,7 @@ Tilemap:
   - first: {x: 148, y: 20, z: 0}
     second:
       m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -75707,7 +75765,7 @@ Tilemap:
   - first: {x: 152, y: 22, z: 0}
     second:
       m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -79269,14 +79327,14 @@ Tilemap:
     m_Data: {fileID: 21300040, guid: e0e9d3134cfa1814ea17d40e8ced2a6c, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 21300062, guid: e0e9d3134cfa1814ea17d40e8ced2a6c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300078, guid: e0e9d3134cfa1814ea17d40e8ced2a6c, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300060, guid: e0e9d3134cfa1814ea17d40e8ced2a6c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 5082
     m_Data:
