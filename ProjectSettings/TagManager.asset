@@ -60,3 +60,6 @@ TagManager:
   - name: AguaAtras
     uniqueID: 1209288911
     locked: 0
+  - name: Cutscene
+    uniqueID: 761414675
+    locked: 0
