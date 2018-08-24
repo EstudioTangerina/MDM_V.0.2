@@ -300,9 +300,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ActEnemy.cs" />
     <Compile Include="Assets\Scripts\ActionPlayer.cs" />
     <Compile Include="Assets\Scripts\AI_movement_1.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\CollsAnchor.cs" />
     <Compile Include="Assets\Scripts\Cutscene.cs" />
     <Compile Include="Assets\Scripts\MenuParallax.cs" />
     <Compile Include="Assets\Tile Map\Tile Animation\Animated Tile\Scripts\AnimatedTile.cs" />
