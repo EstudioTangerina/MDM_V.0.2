@@ -5,69 +5,71 @@ using UnityEngine;
 
 public class ActionPlayer : MonoBehaviour
 {
-    private float Speed;
+    private float speed;
     public float jumpSpeed = 5.5f;
+
     private bool isGrounded = true;
+    private bool andou = false;
+    public bool passou = true;
 
-    private bool Andou = false;
+    public GameObject aguaAtras;
 
-    public GameObject AguaAtras;
-    public bool Passou = true;
-
-    private Rigidbody2D RB;
+    private Rigidbody2D rb;
 
     private Animator anim;
 
-
     private int timeJump;
 
-    // Use this for initialization
     void Start()
     {
-
-        RB = GetComponent<Rigidbody2D>();
-        Speed = 3.5f;
+        rb = GetComponent<Rigidbody2D>();
+        speed = 3.5f;
         timeJump = 3;
         anim = GetComponent<Animator>();
-
-
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Ataque();
+    }
+
+    void FixedUpdate()
+    { 
         moviment();
 
         if (isGrounded == false) anim.SetBool("Pulando", true);
         else anim.SetBool("Pulando", false);
-        anim.SetFloat("Blend", RB.velocity.y);
+        anim.SetFloat("Blend", rb.velocity.y);
     }
 
     void moviment()
     {
-        anim.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
+            anim.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
-        {
-            transform.position += Vector3.right * Speed * Time.deltaTime;
-            transform.eulerAngles = new Vector2(0, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            transform.position += Vector3.left * Speed * Time.deltaTime;
-            transform.eulerAngles = new Vector2(0, 180);
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && timeJump < 2 || Input.GetKeyDown(KeyCode.W) && timeJump < 2)
-        {
-            RB.velocity = new Vector2(RB.velocity.x, jumpSpeed);
-            timeJump++;
-            isGrounded = false;
-        }
+
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                transform.eulerAngles = new Vector2(0, 0);
+            }
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+                transform.eulerAngles = new Vector2(0, 180);
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.UpArrow) && timeJump < 2 || Input.GetKeyDown(KeyCode.W) && timeJump < 2)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+                timeJump++;
+                isGrounded = false;
+            }
+ 
     }
     void Ataque()
     {
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.H))
         {
             anim.SetBool("AtaqueLeve", true);
         }
@@ -76,15 +78,20 @@ public class ActionPlayer : MonoBehaviour
             anim.SetBool("AtaqueLeve", false);
         }
 
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.J))
         {
             anim.SetBool("AtaquePesado", true);
         }
-        else
-        {
-            anim.SetBool("AtaquePesado", false);
-        }
     }
+
+    #region EndAnim
+
+    public void EndAtckPesado()
+    {
+        anim.SetBool("AtaquePesado", false);
+    }
+    #endregion
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Chao")
@@ -97,7 +104,7 @@ public class ActionPlayer : MonoBehaviour
     {
         if (coll.gameObject.name == "AguaAtras")
         {
-            AguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
+            aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
         }
         
     }
@@ -105,7 +112,7 @@ public class ActionPlayer : MonoBehaviour
     {
          if (collision.gameObject.name == "AguaAtras")
         {
-            AguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 1f);
+            aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 1f);
         }
     }
 
