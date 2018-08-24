@@ -6,7 +6,7 @@ using UnityEngine;
 public class ActionPlayer : MonoBehaviour
 {
     private float Speed;
-    public float jumpSpeed = 5.5f;
+    public float jumpSpeed;
     private bool isGrounded = true;
 
     private bool Andou = false;
@@ -24,19 +24,21 @@ public class ActionPlayer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         RB = GetComponent<Rigidbody2D>();
-        Speed = 3.5f;
+        Speed = 4f;
+        jumpSpeed = 7f;
         timeJump = 3;
         anim = GetComponent<Animator>();
+    }
 
-
+    private void Update()
+    {
+        Ataque();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Ataque();
         moviment();
 
         if (isGrounded == false) anim.SetBool("Pulando", true);
@@ -67,7 +69,7 @@ public class ActionPlayer : MonoBehaviour
     }
     void Ataque()
     {
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.H))
         {
             anim.SetBool("AtaqueLeve", true);
         }
@@ -76,7 +78,7 @@ public class ActionPlayer : MonoBehaviour
             anim.SetBool("AtaqueLeve", false);
         }
 
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.J))
         {
             anim.SetBool("AtaquePesado", true);
         }
