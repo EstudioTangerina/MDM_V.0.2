@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Chao
+  - Ancora
   layers:
   - Default
   - TransparentFX
@@ -54,15 +55,18 @@ TagManager:
   - name: Terra
     uniqueID: 2061744897
     locked: 0
+  - name: AguaFrente
+    uniqueID: 2830880221
+    locked: 0
+  - name: Polvo
+    uniqueID: 3063871771
+    locked: 0
   - name: Player
     uniqueID: 1359635399
-    locked: 0
-  - name: AguaAtras
-    uniqueID: 1209288911
     locked: 0
   - name: Cutscene
     uniqueID: 761414675
     locked: 0
-  - name: Polvo
-    uniqueID: 3063871771
+  - name: AguaAtras
+    uniqueID: 1209288911
     locked: 0

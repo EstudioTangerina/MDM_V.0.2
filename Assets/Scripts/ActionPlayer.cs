@@ -5,43 +5,43 @@ using UnityEngine;
 
 public class ActionPlayer : MonoBehaviour
 {
-    private float speed;
-    public float jumpSpeed;
+    private float Speed;
+    public float jumpSpeed = 5.5f;
     private bool isGrounded = true;
 
     private bool Andou = false;
 
-    public GameObject aguaAtras;
-    public bool passou = true;
+    public GameObject AguaAtras;
+    public bool Passou = true;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D RB;
 
     private Animator anim;
 
 
     private int timeJump;
 
+    // Use this for initialization
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        speed = 4f;
-        jumpSpeed = 7f;
+
+        RB = GetComponent<Rigidbody2D>();
+        Speed = 3.5f;
         timeJump = 3;
         anim = GetComponent<Animator>();
+
+
     }
 
-    private void Update()
-    {
-        Ataque();
-    }
-
+    // Update is called once per frame
     void FixedUpdate()
     {
+        Ataque();
         moviment();
 
         if (isGrounded == false) anim.SetBool("Pulando", true);
         else anim.SetBool("Pulando", false);
-        anim.SetFloat("Blend", rb.velocity.y);
+        anim.SetFloat("Blend", RB.velocity.y);
     }
 
     void moviment()
@@ -50,25 +50,24 @@ public class ActionPlayer : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.right * Speed * Time.deltaTime;
             transform.eulerAngles = new Vector2(0, 0);
         }
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.left * Speed * Time.deltaTime;
             transform.eulerAngles = new Vector2(0, 180);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow) && timeJump < 2 || Input.GetKeyDown(KeyCode.W) && timeJump < 2)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            RB.velocity = new Vector2(RB.velocity.x, jumpSpeed);
             timeJump++;
             isGrounded = false;
         }
     }
-
     void Ataque()
     {
-        if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.Z))
         {
             anim.SetBool("AtaqueLeve", true);
         }
@@ -77,19 +76,15 @@ public class ActionPlayer : MonoBehaviour
             anim.SetBool("AtaqueLeve", false);
         }
 
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.X))
         {
             anim.SetBool("AtaquePesado", true);
         }
+        else
+        {
+            anim.SetBool("AtaquePesado", false);
+        }
     }
-
-    #region EndAnim
-    public void EndAtckPesado()
-    {
-        anim.SetBool("AtaquePesado", false);
-    }
-    #endregion
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Chao")
@@ -102,7 +97,7 @@ public class ActionPlayer : MonoBehaviour
     {
         if (coll.gameObject.name == "AguaAtras")
         {
-            aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
+            AguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
         }
         
     }
@@ -110,7 +105,7 @@ public class ActionPlayer : MonoBehaviour
     {
          if (collision.gameObject.name == "AguaAtras")
         {
-            aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 1f);
+            AguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 1f);
         }
     }
 
