@@ -13422,7 +13422,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4979465346115990, guid: beeac011b597f334c9533a2afb1edb75, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.8149488
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 66703204116095792, guid: beeac011b597f334c9533a2afb1edb75,
         type: 2}

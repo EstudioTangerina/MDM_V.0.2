@@ -17,14 +17,15 @@ public class MenuParallax : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(pl != null)
+		{
         var vel = pl.GetComponent<Rigidbody2D>().velocity.x;
         if(Time.timeScale!=0)
-        {
+        {	
             var side = pl.transform.localScale.x;
             pos += speed * side;
             mat.mainTextureOffset = new Vector2(pos, 0);
         }
-	
+		}
 	}
 }

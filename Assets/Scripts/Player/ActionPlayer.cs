@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActionPlayer : MonoBehaviour
 {
     private float speed;
     public float jumpSpeed = 5.5f;
+    public float Velocidade = 1.0F;
+    private float startTime;
+    private float journeyLength;
 
     private bool isGrounded = true;
     private bool andou = false;
@@ -19,29 +23,33 @@ public class ActionPlayer : MonoBehaviour
     private Animator anim;
 
     private int timeJump;
+	public int lifePlayer;
 
     public Transform startMarker;
     public Transform endMarker;
-    public float Velocidade = 1.0F;
-    private float startTime;
-    private float journeyLength;
 
+	public Slider sliderHealth;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        speed = 3.5f;
-        timeJump = 3;
-        anim = GetComponent<Animator>();
-        startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
+        startTime = Time.time;
+
+        speed = 3.5f;
+
+        timeJump = 3;
+		lifePlayer = 5;
     }
 
     void Update()
     {
         Ataque();
-        
 
+		Died();
     }
 
     void FixedUpdate()
@@ -96,9 +104,17 @@ public class ActionPlayer : MonoBehaviour
         }
     }
 
-    #region EndAnim
+	void Died()
+	{
+		if (lifePlayer <= 0)
+		{
+			Destroy(this.gameObject);
+		}
+	}
 
-    public void EndAtckPesado()
+	#region EndAnim
+
+	public void EndAtckPesado()
     {
         anim.SetBool("AtaquePesado", false);
     }
