@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Chao
   - Ancora
+  - Polvo
+  - Anchor
+  - LifeBoss
   layers:
   - Default
   - TransparentFX
@@ -58,15 +61,18 @@ TagManager:
   - name: AguaFrente
     uniqueID: 2830880221
     locked: 0
-  - name: Polvo
-    uniqueID: 3063871771
-    locked: 0
   - name: Player
     uniqueID: 1359635399
+    locked: 0
+  - name: Boss
+    uniqueID: 3063871771
     locked: 0
   - name: Cutscene
     uniqueID: 761414675
     locked: 0
   - name: AguaAtras
     uniqueID: 1209288911
+    locked: 0
+  - name: Tinta
+    uniqueID: 3186038419
     locked: 0

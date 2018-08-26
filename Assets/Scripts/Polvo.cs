@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Polvo : MonoBehaviour
 {
@@ -8,12 +9,17 @@ public class Polvo : MonoBehaviour
     public bool Perto;
     public bool IdlePolvo;
     public bool TintaPolvo;
+
+    public GameObject animObject;
+    public Animator animAnimator;
+    public string NomeScena;
     // Use this for initialization
     void Start()
     {
+        animAnimator = animObject.GetComponent<Animator>();
         Perto = false;
         IdlePolvo = false;
-        TintaPolvo = true;
+        TintaPolvo = false;
         StartCoroutine(Ballpusgo());
     }
 
@@ -27,8 +33,7 @@ public class Polvo : MonoBehaviour
             if (Perto == false)
             {
                 Perto = true;
-                GetComponent<Animator>().SetTrigger("Perto");
-                GetComponent<Animator>().SetBool("PlayerPerto", true);
+                StartCoroutine(TimeDePerto());
             }
         }
         else
@@ -38,42 +43,46 @@ public class Polvo : MonoBehaviour
                 GetComponent<Animator>().SetTrigger("Longe");
                 Perto = false;
                 GetComponent<Animator>().SetBool("PlayerPerto", false);
+                TintaPolvo = true;
                 
             }
         }
 
+        if(GetComponent<LifeBar>().Fill < 0)
+        {
+            GetComponent<Animator>().SetBool("Morreu", true);
+            TintaPolvo = false;
+            StartCoroutine(LoadScene());
+        }
+
     }
-    IEnumerator Ballpusgo()
+   public IEnumerator Ballpusgo()
     {
         yield return new WaitForSeconds(3);
         GetComponent<Animator>().SetBool("Tinta", true);
+        TintaPolvo = true;
         StopCoroutine(Ballpusgo());
         yield return new WaitForSeconds(9);
         GetComponent<Animator>().SetBool("Tinta", false);
         yield return new WaitForSeconds(2);
         GetComponent<Animator>().SetBool("Tinta", false);
+        TintaPolvo = false;
         StartCoroutine(Ballpusgo());
     }
-
-   void OnTriggerEnter2D(Collider2D coll)
+    IEnumerator TimeDePerto()
     {
-        if (coll.gameObject.tag.Equals("Ancora"))
-        {
-            GetComponent<Animator>().SetTrigger("Damage");
-        }
-        print(coll);
+        yield return new WaitForSeconds(3);
+        GetComponent<Animator>().SetBool("PlayerPerto", true);
+        TintaPolvo = false;
+        StopCoroutine(TimeDePerto());
+        print(TimeDePerto());
     }
-    /*{
-        if(coll.gameObject.name == "Anchor")
-        {
-            GetComponent<Animator>().SetBool("Damage", true);
-        }
-        else
-        {
-            GetComponent<Animator>().SetBool("Damage", false);
-        }
-        
-    }*/
+    IEnumerator LoadScene()
+    {
+        animAnimator.SetBool("LevelComplete", true);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(NomeScena);
+    }
 }
         
             

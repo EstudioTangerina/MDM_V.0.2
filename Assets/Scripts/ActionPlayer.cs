@@ -20,21 +20,32 @@ public class ActionPlayer : MonoBehaviour
 
     private int timeJump;
 
+    public Transform startMarker;
+    public Transform endMarker;
+    public float Velocidade = 1.0F;
+    private float startTime;
+    private float journeyLength;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         speed = 3.5f;
         timeJump = 3;
         anim = GetComponent<Animator>();
+        startTime = Time.time;
+        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
     }
 
     void Update()
     {
         Ataque();
+        
+
     }
 
     void FixedUpdate()
-    { 
+    {
         moviment();
 
         if (isGrounded == false) anim.SetBool("Pulando", true);
@@ -46,7 +57,7 @@ public class ActionPlayer : MonoBehaviour
     {
             anim.SetFloat("Speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
 
-
+        
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 transform.position += Vector3.right * speed * Time.deltaTime;
@@ -65,6 +76,7 @@ public class ActionPlayer : MonoBehaviour
                 timeJump++;
                 isGrounded = false;
             }
+        
  
     }
     void Ataque()
@@ -92,7 +104,7 @@ public class ActionPlayer : MonoBehaviour
     }
     #endregion
 
-    private void OnCollisionEnter2D(Collision2D col)
+     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Chao")
         {
@@ -100,19 +112,33 @@ public class ActionPlayer : MonoBehaviour
             isGrounded = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D coll)
+     void OnTriggerEnter2D(Collider2D Collo)
     {
-        if (coll.gameObject.name == "AguaAtras")
+        if (Collo.gameObject.name == "AguaAtras")
         {
             aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
         }
-        
+        /*if (Collo.gameObject.name == "Anchor")
+        {
+            GameObject.FindGameObjectWithTag("LifeBoss").GetComponent<LifeBar>().LifeDoBoss();
+            GameObject.FindGameObjectWithTag("LifeBoss").GetComponent<LifeBar>().LifeBosses -= 1;
+        }*/
     }
-    private void OnTriggerExit2D(Collider2D collision)
+     void OnTriggerExit2D(Collider2D collAguaExit)
     {
-         if (collision.gameObject.name == "AguaAtras")
+         if (collAguaExit.gameObject.name == "AguaAtras")
         {
             aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 1f);
+        }
+    }
+     void OnTriggerStay2D(Collider2D colliComplete)
+    {
+        if(colliComplete.gameObject.name == "Level Complete")
+        {
+            float distCovered = (Time.time - startTime) * Velocidade;
+            float fracJourney = distCovered / journeyLength;
+            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+
         }
     }
 
