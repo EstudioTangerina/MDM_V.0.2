@@ -13370,6 +13370,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 66703204116095792, guid: beeac011b597f334c9533a2afb1edb75,
         type: 2}
       propertyPath: m_ColliderPaths.Array.size
@@ -14961,6 +14966,47 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300010, guid: 5da97522aa868684793a3962eec3eddc,
+        type: 3}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5da97522aa868684793a3962eec3eddc,
+        type: 3}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300002, guid: 5da97522aa868684793a3962eec3eddc,
+        type: 3}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: 5da97522aa868684793a3962eec3eddc,
+        type: 3}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300006, guid: 5da97522aa868684793a3962eec3eddc,
+        type: 3}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: states.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300008, guid: 5da97522aa868684793a3962eec3eddc,
+        type: 3}
+    - target: {fileID: 114037071299441422, guid: beeac011b597f334c9533a2afb1edb75,
+        type: 2}
+      propertyPath: life
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: beeac011b597f334c9533a2afb1edb75, type: 2}
   m_IsPrefabParent: 0
@@ -15069,8 +15115,8 @@ GameObject:
   - component: {fileID: 2078883545}
   - component: {fileID: 2078883544}
   - component: {fileID: 2078883543}
-  - component: {fileID: 2078883547}
   - component: {fileID: 2078883549}
+  - component: {fileID: 2078883547}
   - component: {fileID: 2078883546}
   - component: {fileID: 2078883551}
   - component: {fileID: 2078883548}

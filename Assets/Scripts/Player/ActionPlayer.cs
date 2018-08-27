@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,9 +15,14 @@ public class ActionPlayer : MonoBehaviour
 
     private bool isGrounded = true;
     private bool andou = false;
+    public bool atacou = false;
     public bool passou = true;
+    public bool Funciona = true;
+    public bool Pisca = false;
+
 
     public GameObject aguaAtras;
+    public GameObject Player;
 
     private Rigidbody2D rb;
 
@@ -32,7 +38,11 @@ public class ActionPlayer : MonoBehaviour
 
     void Start()
     {
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        //if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("SampleManager"))
+        if(startMarker != null && endMarker != null)
+        {
+            journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        }
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -42,7 +52,7 @@ public class ActionPlayer : MonoBehaviour
         speed = 3.5f;
 
         timeJump = 3;
-		lifePlayer = 5;
+		lifePlayer = 7;
     }
 
     void Update()
@@ -92,15 +102,18 @@ public class ActionPlayer : MonoBehaviour
         if (Input.GetKey(KeyCode.H))
         {
             anim.SetBool("AtaqueLeve", true);
+            atacou = true;
         }
         else
         {
             anim.SetBool("AtaqueLeve", false);
+            atacou = false;
         }
 
         if (Input.GetKey(KeyCode.J))
         {
             anim.SetBool("AtaquePesado", true);
+            atacou = true;
         }
     }
 
@@ -127,6 +140,15 @@ public class ActionPlayer : MonoBehaviour
             timeJump = 0;
             isGrounded = true;
         }
+        if (col.gameObject.tag.Equals("Caracol"))
+        {
+            Pisca = true;
+            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().LifePlayer();
+            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().life -= 1;
+            lifePlayer -= 2;
+            StartCoroutine(DamagePlayer());
+            StartCoroutine(DamageBlink());
+        }
     }
      void OnTriggerEnter2D(Collider2D Collo)
     {
@@ -134,11 +156,16 @@ public class ActionPlayer : MonoBehaviour
         {
             aguaAtras.GetComponent<Tilemap>().color = new Color(255, 255, 255, 0.7137255f);  
         }
-        /*if (Collo.gameObject.name == "Anchor")
+        if (Collo.gameObject.tag.Equals("Tinta"))
         {
-            GameObject.FindGameObjectWithTag("LifeBoss").GetComponent<LifeBar>().LifeDoBoss();
-            GameObject.FindGameObjectWithTag("LifeBoss").GetComponent<LifeBar>().LifeBosses -= 1;
-        }*/
+            Pisca = true;
+            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().LifePlayer();
+            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().life -= 1;
+            lifePlayer -= 1;
+            StartCoroutine(DamagePlayer());
+            StartCoroutine(DamageBlink());
+        }
+
     }
      void OnTriggerExit2D(Collider2D collAguaExit)
     {
@@ -153,9 +180,25 @@ public class ActionPlayer : MonoBehaviour
         {
             float distCovered = (Time.time - startTime) * Velocidade;
             float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+            transform.position = Vector3.MoveTowards(startMarker.position, endMarker.position, Time.deltaTime);
 
         }
     }
-
+   public IEnumerator DamagePlayer()
+    {
+        while (Pisca == true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            Player.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            yield return new WaitForSeconds(0.1f);
+            Player.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        }
+    }
+    IEnumerator DamageBlink()
+    {
+        yield return new WaitForSeconds(1);
+        Pisca = false;
+        StopCoroutine(DamagePlayer());
+        StopCoroutine(DamageBlink());
+    }
 }

@@ -10,6 +10,8 @@ TagManager:
   - Anchor
   - LifeBoss
   - Caracol
+  - Life
+  - Tinta
   layers:
   - Default
   - TransparentFX
@@ -76,4 +78,7 @@ TagManager:
     locked: 0
   - name: Tinta
     uniqueID: 3186038419
+    locked: 0
+  - name: Enemy
+    uniqueID: 535612191
     locked: 0

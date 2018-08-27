@@ -22,7 +22,7 @@ public class Caracol : MonoBehaviour
 	{
 		speedCaracol = 2f;
 
-		lifeCaracol = 5;
+		lifeCaracol = 10;
 
 		player = GameObject.FindGameObjectWithTag("Player").GetComponent<ActionPlayer>();
 
@@ -74,17 +74,17 @@ public class Caracol : MonoBehaviour
 	{
 		if (coll.gameObject.tag.Equals("Player"))
 		{
-			player.lifePlayer -= 1;
-
-			print(player.lifePlayer);
+			//player.lifePlayer -= 1;
+            print(player.lifePlayer);
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.tag.Equals("Anchor"))
+		if (coll.gameObject.tag.Equals("Anchor") && player.atacou == true)
 		{
 			lifeCaracol -= 1;
+
 			print(lifeCaracol);
 		}
 	}
