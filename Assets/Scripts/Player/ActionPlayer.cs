@@ -35,7 +35,7 @@ public class ActionPlayer : MonoBehaviour
     public Transform endMarker;
 
 	public Slider sliderHealth;
-
+    bool andar;
     void Start()
     {
         //if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("SampleManager"))
@@ -58,6 +58,17 @@ public class ActionPlayer : MonoBehaviour
     void Update()
     {
         Ataque();
+
+        if(andar)
+        {
+            float d = Vector2.Distance(transform.position, endMarker.position);
+
+            if (d > 0)
+                transform.position = Vector2.MoveTowards(transform.position, endMarker.position, 5 * Time.deltaTime);
+
+            else
+                andar = false;
+        }
 
 		Died();
     }
@@ -180,7 +191,8 @@ public class ActionPlayer : MonoBehaviour
         {
             float distCovered = (Time.time - startTime) * Velocidade;
             float fracJourney = distCovered / journeyLength;
-            transform.position = Vector3.MoveTowards(startMarker.position, endMarker.position, Time.deltaTime);
+            andar = true;
+           
 
         }
     }

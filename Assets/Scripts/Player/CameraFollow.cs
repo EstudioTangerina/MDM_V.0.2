@@ -14,14 +14,18 @@ public class CameraFollow : MonoBehaviour {
 	
 	void LateUpdate () {
 
-		if(Player != null)
+		if(Player != null && transform.position.x < 205.8f)
 		{
         transform.position = Player.transform.position + offset;
         transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
 		}
-        /*if (Player.transform.position.x > 0f && Player.transform.position.x < MaxCamSegue && Player != null)
+        else
         {
-            transform.position = new Vector3(Player.transform.position.x, transform.position.y, -10f);
-        }*/
+            Vector3 f = new Vector3(transform.position.x, 13.678f, transform.position.z);
+
+            transform.position = Vector3.Lerp(transform.position, f, 3 * Time.deltaTime);
+
+
+        }
     }
 }
