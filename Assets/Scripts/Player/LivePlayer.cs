@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LivePlayer : MonoBehaviour {
-
-    public int life;
-    public GameObject Aperte;
+    public ActionPlayer life;
 
     public Sprite[] states;
 
@@ -13,42 +11,41 @@ public class LivePlayer : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
+        life = GameObject.FindGameObjectWithTag("Player").GetComponent<ActionPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        LifePlayer();
     }
+
     public void LifePlayer()
     {
-        if (life == 5)
+        if (life.lifePlayer == 5)
         {
             GetComponent<SpriteRenderer>().sprite = states[0];
         }
-        if (life == 4)
+        if (life.lifePlayer == 4)
         {
             GetComponent<SpriteRenderer>().sprite = states[1];
         }
-        if (life == 3)
+        if (life.lifePlayer == 3)
         {
             GetComponent<SpriteRenderer>().sprite = states[2];
         }
-        if (life == 2)
+        if (life.lifePlayer == 2)
         {
             GetComponent<SpriteRenderer>().sprite = states[3];
         }
-        if (life == 1)
+        if (life.lifePlayer == 1)
         {
             GetComponent<SpriteRenderer>().sprite = states[4];
         }
-        if (life == 0)
+        if (life.lifePlayer == 0)
         {
             GetComponent<SpriteRenderer>().sprite = states[5];
-            Aperte.SetActive(true);
         }
-
 
     }
 }

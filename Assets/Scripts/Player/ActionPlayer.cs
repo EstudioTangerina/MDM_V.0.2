@@ -23,6 +23,7 @@ public class ActionPlayer : MonoBehaviour
 
     public GameObject aguaAtras;
     public GameObject Player;
+    public GameObject Aperte;
 
     private Rigidbody2D rb;
 
@@ -49,7 +50,7 @@ public class ActionPlayer : MonoBehaviour
 
         startTime = Time.time;
 
-        speed = 3.5f;
+        speed = 4.5f;
 
         timeJump = 3;
 		lifePlayer = 5;
@@ -132,6 +133,7 @@ public class ActionPlayer : MonoBehaviour
 	{
 		if (lifePlayer <= 0)
 		{
+            Aperte.SetActive(true);
 			Destroy(this.gameObject);
 		}
 	}
@@ -154,9 +156,6 @@ public class ActionPlayer : MonoBehaviour
         if (col.gameObject.tag.Equals("Caracol"))
         {
             Pisca = true;
-            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().LifePlayer();
-            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().life -= 1;
-            lifePlayer -= 1;
             StartCoroutine(DamagePlayer());
             StartCoroutine(DamageBlink());
         }
@@ -169,9 +168,7 @@ public class ActionPlayer : MonoBehaviour
         }
         if (Collo.gameObject.tag.Equals("Tinta"))
         {
-            Pisca = true;
-            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().LifePlayer();
-            GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().life -= 1;
+            Pisca = true;         
             lifePlayer -= 1;
             StartCoroutine(DamagePlayer());
             StartCoroutine(DamageBlink());
@@ -196,6 +193,7 @@ public class ActionPlayer : MonoBehaviour
 
         }
     }
+
    public IEnumerator DamagePlayer()
     {
         while (Pisca == true)

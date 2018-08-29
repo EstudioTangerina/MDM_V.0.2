@@ -43,7 +43,7 @@ public class Caracol : MonoBehaviour
 	private void FixedUpdate()
 	{
 		
-		Vector2 lineConstPost = transformCaracol.position.toVector2() - transformCaracol.right.toVector2() * widthCaracol + Vector2.up * heightCaracol;
+		Vector2 lineConstPost = transformCaracol.position.toVector2() - transformCaracol.right.toVector2() * widthCaracol + Vector2.down * heightCaracol;
 		Debug.DrawLine(lineConstPost, lineConstPost + Vector2.up);
 		bool isGrounded = Physics2D.Linecast(lineConstPost, lineConstPost + Vector2.down, maskCaracol);
 		Debug.DrawLine(lineConstPost, lineConstPost - transformCaracol.right.toVector2());
@@ -87,8 +87,7 @@ public class Caracol : MonoBehaviour
 	{
 		if (coll.gameObject.tag.Equals("Player"))
 		{
-			//player.lifePlayer -= 1;
-            print(player.lifePlayer);
+			player.lifePlayer -= 1;
 		}
 	}
 
