@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{4610B773-88FC-2FEB-7234-5067B3808E28}</ProjectGuid>
+    <ProjectGuid>{AFF95B4D-42AD-EED0-5A17-56D00AE76689}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -63,10 +63,10 @@
   <ItemGroup>
     <Compile Include="Assets\Sprites\Tile Map\Tile Animation\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Bonni/Downloads/MDM-My-Dear-Memory--master/MDM-My-Dear-Memory--master/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Bonni/OneDrive/Documentos/GitHub/MDM-My-Dear-Memory-/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Bonni/Downloads/MDM-My-Dear-Memory--master/MDM-My-Dear-Memory--master/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Bonni/OneDrive/Documentos/GitHub/MDM-My-Dear-Memory-/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -368,7 +368,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{993E89F2-3727-996C-A6EF-1F42720D2243}</Project>
+      <Project>{BD7C53B1-6ED5-8FDB-3433-B79C122F7470}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

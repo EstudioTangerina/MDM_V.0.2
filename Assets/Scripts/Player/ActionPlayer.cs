@@ -52,7 +52,7 @@ public class ActionPlayer : MonoBehaviour
         speed = 3.5f;
 
         timeJump = 3;
-		lifePlayer = 7;
+		lifePlayer = 5;
     }
 
     void Update()
@@ -156,7 +156,7 @@ public class ActionPlayer : MonoBehaviour
             Pisca = true;
             GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().LifePlayer();
             GameObject.FindGameObjectWithTag("Life").GetComponent<LivePlayer>().life -= 1;
-            lifePlayer -= 2;
+            lifePlayer -= 1;
             StartCoroutine(DamagePlayer());
             StartCoroutine(DamageBlink());
         }

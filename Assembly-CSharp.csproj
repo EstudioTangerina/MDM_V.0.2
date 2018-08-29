@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{993E89F2-3727-996C-A6EF-1F42720D2243}</ProjectGuid>
+    <ProjectGuid>{BD7C53B1-6ED5-8FDB-3433-B79C122F7470}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\Other\Extension.cs" />
     <Compile Include="Assets\Scripts\Other\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Other\MenuParallax.cs" />
+    <Compile Include="Assets\Scripts\Other\PainelDead.cs" />
+    <Compile Include="Assets\Scripts\Other\SeguePlayer.cs" />
     <Compile Include="Assets\Scripts\Player\ActionPlayer.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\CameraSeguindo.cs" />
@@ -80,10 +82,10 @@
     <Compile Include="Assets\Sprites\Tile Map\Tile Animation\Rule Tile\Scripts\RuleTile.cs" />
     <Compile Include="Assets\Sprites\Tile Map\Tile Animation\Terrain Tile\Scripts\TerrainTile.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Bonni/Downloads/MDM-My-Dear-Memory--master/MDM-My-Dear-Memory--master/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Bonni/OneDrive/Documentos/GitHub/MDM-My-Dear-Memory-/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Bonni/Downloads/MDM-My-Dear-Memory--master/MDM-My-Dear-Memory--master/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Bonni/OneDrive/Documentos/GitHub/MDM-My-Dear-Memory-/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

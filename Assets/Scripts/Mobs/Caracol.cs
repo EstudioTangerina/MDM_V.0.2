@@ -14,6 +14,8 @@ public class Caracol : MonoBehaviour
 
 	private ActionPlayer player;
 
+    bool pisca = false;
+
 	float speedCaracol;
 	float widthCaracol, heightCaracol;
 
@@ -69,8 +71,19 @@ public class Caracol : MonoBehaviour
 
 	}
 
+    IEnumerator DamageMob()
+    {
+        if (pisca == true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            yield return new WaitForSeconds(0.1f);
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        }
+    }
 
-	private void OnCollisionEnter2D(Collision2D coll)
+
+    private void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag.Equals("Player"))
 		{
@@ -84,7 +97,7 @@ public class Caracol : MonoBehaviour
 		if (coll.gameObject.tag.Equals("Anchor") && player.atacou == true)
 		{
 			lifeCaracol -= 1;
-
+            pisca = true;
 			print(lifeCaracol);
 		}
 	}

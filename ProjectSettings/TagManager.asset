@@ -12,6 +12,7 @@ TagManager:
   - Caracol
   - Life
   - Tinta
+  - Segue
   layers:
   - Default
   - TransparentFX

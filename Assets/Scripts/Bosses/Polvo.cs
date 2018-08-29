@@ -33,7 +33,7 @@ public class Polvo : MonoBehaviour
             if (Perto == false)
             {
                 Perto = true;
-                StartCoroutine(TimeDePerto());
+                //StartCoroutine(TimeDePerto());
             }
         }
         else

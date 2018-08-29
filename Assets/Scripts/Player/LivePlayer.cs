@@ -5,6 +5,7 @@ using UnityEngine;
 public class LivePlayer : MonoBehaviour {
 
     public int life;
+    public GameObject Aperte;
 
     public Sprite[] states;
 
@@ -45,7 +46,9 @@ public class LivePlayer : MonoBehaviour {
         if (life == 0)
         {
             GetComponent<SpriteRenderer>().sprite = states[5];
+            Aperte.SetActive(true);
         }
+
 
     }
 }

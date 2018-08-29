@@ -13,7 +13,7 @@ public class IntanciaTiroTinta : MonoBehaviour {
 
     void Start()
     {
-        Segue = GameObject.FindGameObjectWithTag("Player").transform;
+        Segue = GameObject.FindGameObjectWithTag("Segue").transform;
 
         target = new Vector2(Segue.position.x , Segue.position.y );
     }
