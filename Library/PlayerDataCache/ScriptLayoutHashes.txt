@@ -1,8 +1,9 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Aluno/Documents/GitHub/MDM-My-Dear-Memory-/MyDearMemoryGame/MyDearMemoryGame.exe
+C:/Users/Bonni/OneDrive/Documentos/GitHub/MDM-My-Dear-Memory-/My Dear Memory Pre Alfa Edition/My Dear Memory Pre Alfa Edition.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
+Assets/Scenes/PrealfaDialogue.unity
 Assets/Scenes/SampleScene.unity
 Assets/Scenes/BossPolvo.unity
 Assets/Scenes/Creditos/Programadores.unity
@@ -21,6 +22,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 38b39bf80584618ddd058e2559d9ff8f Assembly-CSharp.dll:.LivePlayer
+82c521cd2690a77602936e8a3c33ff6c Assembly-CSharp.dll:.Prealfa
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -101,6 +103,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+b45cf8912fa4850d6378d927bce5db02 Assembly-CSharp.dll:.BrilhaTexto
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery

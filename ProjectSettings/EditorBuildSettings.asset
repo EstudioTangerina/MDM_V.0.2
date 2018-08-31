@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6f2cd6dd70c5d53478aebef6ef267334
   - enabled: 1
+    path: Assets/Scenes/PrealfaDialogue.unity
+    guid: 172267f111e88d3409ee8a1ef2b78022
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
