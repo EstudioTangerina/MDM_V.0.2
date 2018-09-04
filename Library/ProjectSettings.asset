@@ -40,16 +40,8 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 25678d8f08066644fbe3d2b50fc06f8b, type: 3}
-    duration: 2
-  - logo: {fileID: 21300014, guid: ac26df2575e41f240884674390f05b35, type: 3}
-    duration: 2
-  - logo: {fileID: 21300016, guid: ac26df2575e41f240884674390f05b35, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 64b3da7ec42b3e74e8d414330b2faea5, type: 3}
-    duration: 2
-  - logo: {fileID: 21300012, guid: ac26df2575e41f240884674390f05b35, type: 3}
-    duration: 2
+  - logo: {fileID: 21300020, guid: ac26df2575e41f240884674390f05b35, type: 3}
+    duration: 5
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -64,7 +56,7 @@ PlayerSettings:
   androidShowActivityIndicatorOnLoading: -1
   tizenShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
-  displayResolutionDialog: 1
+  displayResolutionDialog: 2
   iosAllowHTTPDownload: 1
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
